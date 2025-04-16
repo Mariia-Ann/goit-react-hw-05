@@ -1,23 +1,44 @@
 .movies {
-    padding: 0 40px;
+  padding: 0 40px;
 }
 
 .list {
-    border: 2px solid #683f7d;
-    border-radius: 15px;
-    padding: 20px;
-    padding-left: 40px;
-    background-color: #f7f3f9;
-    list-style-type: circle;
+  border: 2px solid #683f7d;
+  border-radius: 15px;
+  padding: 20px;
+  padding-left: 40px;
+  background-color: #f7f3f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
 .item {
-    text-decoration: none;
-    color: #3b2d4d;
-    font-size: 20px;
-  }
-  
-  .item:visited,
-  .item:hover {
-    color: #683f7d;
-  }
+  border-radius: 15px;
+  background-color: #b693c0;
+  border: 2px solid #b693c0;
+  overflow: hidden;
+}
+
+.itemLink {
+  text-decoration: none;
+  color: #f7f3f9;
+  font-size: 20px;
+}
+
+.itemLink:visited {
+  color: #683f7d;
+}
+
+.item:visited,
+.item:hover {
+  color: #683f7d;
+}
+
+.name {
+    width: 250px;
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+}
