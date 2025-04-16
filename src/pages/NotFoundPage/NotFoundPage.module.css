@@ -1,0 +1,27 @@
+.wrapper {
+  padding: 40px;
+}
+
+.card {
+  border: 2px solid #683f7d;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: #f7f3f9;
+}
+
+.img {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.title {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 25px;
+}
