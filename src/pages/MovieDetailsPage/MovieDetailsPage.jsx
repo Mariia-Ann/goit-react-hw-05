@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import {
   Link,
   NavLink,
@@ -40,9 +40,9 @@ const MovieDetailsPage = () => {
 
   const { title, overview, genres, poster_path, release_date } = movie;
 
-   const setActiveClass = ({ isActive }) => {
-          return clsx(style.movieNav, isActive && style.active)
-      }
+  const setActiveClass = ({ isActive }) => {
+    return clsx(style.movieNav, isActive && style.active);
+  };
 
   return (
     <main className={style.moviePage}>
@@ -60,28 +60,33 @@ const MovieDetailsPage = () => {
           alt={title}
         />
         <div className={style.card}>
-            <h2>
-              {title} {release_date && `(${release_date.slice(0, 4)})`}
-            </h2>
-            <h3>Genres</h3>
-            <p>{genres.map((genre) => genre.name).join(", ")}</p>
-            <h3>Overview</h3>
-            <p>{overview}</p>
+          <h2>
+            {title} {release_date && `(${release_date.slice(0, 4)})`}
+          </h2>
+          <h3>Genres</h3>
+          <p>{genres.map((genre) => genre.name).join(", ")}</p>
+          <h3>Overview</h3>
+          <p>{overview}</p>
         </div>
-        
       </div>
       <div className={style.info}>
-          <h3 className={style.titleInfo}>Additional information</h3>
-          <ul className={style.movieInfo}>
-            <li>
-              <NavLink className={setActiveClass} to="cast">Cast</NavLink>
-            </li>
-            <li>
-              <NavLink className={setActiveClass} to="reviews">Reviews</NavLink>
-            </li>
-          </ul>
+        <h3 className={style.titleInfo}>Additional information</h3>
+        <ul className={style.movieInfo}>
+          <li>
+            <NavLink className={setActiveClass} to="cast">
+              Cast
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className={setActiveClass} to="reviews">
+              Reviews
+            </NavLink>
+          </li>
+        </ul>
+        <Suspense fallback={<Loader />}>
           <Outlet />
-          </div>
+        </Suspense>
+      </div>
     </main>
   );
 };

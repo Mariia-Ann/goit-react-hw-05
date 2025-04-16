@@ -7,7 +7,6 @@ import Loader from "../../components/Loader/Loader";
 
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
-  // const [hasSearched, setHasSearched] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
   const movieName = searchParams.get("query") ?? "";
@@ -20,7 +19,6 @@ const MoviesPage = () => {
         setIsLoading(true);
         const results = await searchMovies(movieName);
         setMovies(results);
-        // setHasSearched(true);
       } catch (error) {
         console.error("Error:", error);
       } finally {
