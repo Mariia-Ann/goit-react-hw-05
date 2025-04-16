@@ -1,0 +1,16 @@
+.review {
+    border: 2px solid #683f7d;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f7f3f9;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.author {
+    margin-bottom: 10px;
+}

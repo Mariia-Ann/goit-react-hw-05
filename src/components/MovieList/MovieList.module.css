@@ -1,0 +1,17 @@
+.list {
+  border: 2px solid #683f7d;
+  border-radius: 15px;
+  padding: 20px;
+  padding-left: 40px;
+  background-color: #f7f3f9;
+  list-style-type: circle;
+}
+.item {
+  text-decoration: none;
+  color: #3b2d4d;
+  font-size: 20px;
+}
+
+.item:visited {
+  color: #683f7d;
+}

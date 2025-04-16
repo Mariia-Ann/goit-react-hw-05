@@ -1,0 +1,26 @@
+.cast {
+    border: 2px solid #683f7d;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #f7f3f9;
+    display: flex;
+    gap: 20px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media screen and (max-width: 767.88px) {
+    .item {
+  flex-direction: column;
+ text-align: center;
+      } 
+}

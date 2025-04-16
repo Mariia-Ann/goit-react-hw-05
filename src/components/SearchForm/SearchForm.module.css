@@ -1,0 +1,36 @@
+ 
+  .search {
+    padding: 20px;
+    text-align: center;
+
+  }
+  .form {
+    display: inline-flex;
+    border: 1px solid #3b2d4d;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .button {
+    background-color: #b693c0;
+    border: none;
+    padding: 10px 10px;
+
+  }
+  
+  .icon {
+    display: flex;
+    color: #3b2d4d;
+  }
+  
+  .input {
+    border: none;
+    padding: 5px;
+    width: 260px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border: none;
+  }
+  
